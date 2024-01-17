@@ -1,6 +1,6 @@
 Package: arcgisutils
 Title: ArcGIS Utility Functions
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X"))
@@ -9,7 +9,7 @@ Description: Developer oriented utility functions designed to be used as
     Services. It provides functionality for authorization, Esri JSON
     construction and parsing, as well as other utilities pertaining to
     geometry and Esri type conversions. To support 'ArcGIS Pro' users,
-    authorization can done via 'arcgisbinding'. Installation instructions
+    authorization can be done via 'arcgisbinding'. Installation instructions
     for 'arcgisbinding' can be found at
     <https://r.esri.com/r-bridge-site/arcgisbinding/installing-arcgisbinding.html>.
 License: Apache License (>= 2)
@@ -24,8 +24,8 @@ Encoding: UTF-8
 Language: en
 RoxygenNote: 7.2.3
 NeedsCompilation: yes
-Packaged: 2024-01-10 16:18:24 UTC; josiahparry
+Packaged: 2024-01-17 20:21:55 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (<https://orcid.org/0000-0001-9910-865X>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-01-11 10:40:07 UTC
+Date/Publication: 2024-01-17 21:22:04 UTC
