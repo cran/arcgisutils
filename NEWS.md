@@ -1,3 +1,20 @@
+# arcgisutils 0.3.0
+
+
+- All geometry conversion functions: `as_esri_geometry()`, `as_esri_features()`, `as_esri_featureset()`, `as_features()` and `as_featureset()` have been rewritten from the ground up using Rust and extendr. 
+  - `arcgisutils` now requires Rust to build from source
+  - `jsonify` is moved to Suggests
+  - `as_geometry()` is no longer exported
+  - `...` argument is removed
+- `auth_key()` is added to support authorization with an API key for ArcGIS Developers accounts
+- `catch_error()` is a new function which parses a string and catches the error as an object. This is useful when processing multiple responses at once. 
+- `rbind_results()` is a new helper function that combines a list of results as efficiently as possible.
+- `arc_base_req()` gains two new arguments `path` and `query` which allows you to add query parameters and paths to the generated base request
+- `arc_self_meta()` is a new function to provide access to the [`/self`](https://developers.arcgis.com/rest/users-groups-and-items/portal-self.htm) endpoint. Closes [#32](https://github.com/R-ArcGIS/arcgisutils/issues/32)
+- Null geometries are parsed into empty Geometry Collections using `sf::st_geometrycollection()` Fixed [#168](https://github.com/R-ArcGIS/arcgislayers/issues/168)
+- When Esri JSON contains 0 features, `parse_esri_json()` will create an empty `data.frame` with the fields that are returned with the appropriate R type.
+
+
 # arcgisutils 0.2.0
 
 - `parse_esri_json()` will return an empty `data.frame` in the presence of empty results an error. If an error is present, the error is reported

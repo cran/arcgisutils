@@ -2,12 +2,15 @@
 % Please edit documentation in R/utils-requests.R
 \name{detect_errors}
 \alias{detect_errors}
+\alias{catch_error}
 \title{Detect errors in parsed json response}
 \usage{
 detect_errors(response, error_call = rlang::caller_env())
+
+catch_error(response, error_call = rlang::caller_env())
 }
 \arguments{
-\item{response}{a \code{\link[httr2:response]{httr2::response}} object.}
+\item{response}{for \code{detect_errors()}, a list typically from \code{RcppSimdJson::fparse(httr2::resp_body_string(resp))}. For \code{catch_error()}, the string from \code{httr2::resp_body_string(resp)}.}
 
 \item{error_call}{default \code{\link[rlang:stack]{rlang::caller_env()}}. The environment from which
 to throw the error from.}
@@ -24,15 +27,15 @@ the contents of the error message are bubbled up.
 }
 \examples{
 \dontrun{
-  response <- list(
-    error = list(
-      code = 400L,
-      message = "Unable to generate token.",
-      details = "Invalid username or password."
-    )
+response <- list(
+  error = list(
+    code = 400L,
+    message = "Unable to generate token.",
+    details = "Invalid username or password."
   )
+)
 
-  detect_errors(response)
+detect_errors(response)
 }
 }
 \concept{requests}

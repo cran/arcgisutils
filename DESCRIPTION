@@ -1,6 +1,6 @@
 Package: arcgisutils
 Title: ArcGIS Utility Functions
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X")),
@@ -21,19 +21,20 @@ License: Apache License (>= 2)
 URL: https://github.com/R-ArcGIS/arcgisutils,
         https://r.esri.com/arcgisutils/
 BugReports: https://github.com/R-ArcGIS/arcgisutils/issues
-Imports: cli, dbplyr, httr2 (>= 1.0.0), jsonify, Rcpp, RcppSimdJson,
-        rlang, sf, utils
-Suggests: arcgisbinding, testthat (>= 3.0.0)
-LinkingTo: Rcpp
+Imports: cli, dbplyr, httr2 (>= 1.0.0), RcppSimdJson, rlang, sf, utils
+Suggests: arcgisbinding, collapse (>= 2.0.0), data.table, vctrs,
+        testthat (>= 3.0.0), jsonify
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en
 RoxygenNote: 7.3.1
+Config/rextendr/version: 0.3.1.9000
+SystemRequirements: Cargo (Rust's package manager), rustc
 NeedsCompilation: yes
-Packaged: 2024-02-22 20:10:54 UTC; josiahparry
+Packaged: 2024-05-09 18:53:50 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (<https://orcid.org/0000-0001-9910-865X>),
   Kenneth Vernon [ctb] (<https://orcid.org/0000-0003-0098-5092>),
   Martha Bass [ctb] (<https://orcid.org/0009-0004-0268-5426>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-02-22 23:00:08 UTC
+Date/Publication: 2024-05-09 19:20:02 UTC
