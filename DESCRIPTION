@@ -1,6 +1,6 @@
 Package: arcgisutils
 Title: R-ArcGIS Bridge Utility Functions
-Version: 0.4.0
+Version: 0.5.0
 Authors@R: c(
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X")),
@@ -27,15 +27,15 @@ Depends: R (>= 4.2)
 Imports: cli, httr2 (>= 1.0.5), R6, RcppSimdJson, rlang, S7, sf, utils,
         yyjsonr, lifecycle
 Suggests: arcgisbinding, collapse (>= 2.0.0), data.table, jsonify,
-        testthat (>= 3.0.0), curl, vctrs
+        testthat (>= 3.0.0), vctrs, curl, shinyOAuth
 Config/rextendr/version: 0.4.2
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.67, xz
 NeedsCompilation: yes
-Packaged: 2025-09-17 19:20:32 UTC; josiahparry
+Packaged: 2026-03-03 21:54:49 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (ORCID:
     <https://orcid.org/0000-0001-9910-865X>),
   Kenneth Vernon [ctb] (ORCID: <https://orcid.org/0000-0003-0098-5092>),
@@ -43,4 +43,4 @@ Author: Josiah Parry [aut, cre] (ORCID:
   Eli Pousson [ctb] (ORCID: <https://orcid.org/0000-0001-8280-1706>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-09-18 05:10:35 UTC
+Date/Publication: 2026-03-04 06:40:09 UTC

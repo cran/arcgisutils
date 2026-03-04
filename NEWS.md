@@ -1,4 +1,10 @@
-# arcgisutils (development version)
+# arcgisutils 0.5.0
+
+- Adds `from_envelope()` and `from_spatial_reference()` to handle processing lists that represent an Esri Envelope and Esri SpatialReference object converting them into sf `bbox` objects
+- Adds `auth_shiny()` and `oauth_provider_arcgis()` to support authentication in a Shiny application. [`{shinyOAuth}`](https://github.com/lukakoning/shinyOAuth/) is now a suggested package <https://github.com/R-ArcGIS/arcgisutils/pull/82>
+- Adds `gp_job_from_url()` which creates a new `arc_gp_job` from a given URL
+
+# arcgisutils 0.4.0
 
 - Adds `arc_portal_servers()` to list all federated servers in your ArcGIS Enterprise portal
 - Adds `arc_portal_resources()` to list all file resources for a given portal ID

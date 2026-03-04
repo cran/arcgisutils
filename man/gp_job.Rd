@@ -27,6 +27,13 @@ via \code{\link[=arc_form_params]{arc_form_params()}} and \code{\link[=arc_job_s
 \code{\link[=arc_form_params]{arc_form_params()}} ensures that parameters provided to a geoprocessing
 service are all character scalars as required by the form body.
 }
+\section{Associated Functions}{
+
+\describe{
+\item{\code{from_url(url, token = arc_token())}}{Create a GP Job object from an existing job URL}
+}
+}
+
 \examples{
 url <- paste0(
   "https://logistics.arcgis.com/arcgis/",
@@ -42,12 +49,12 @@ params
 
 # view underlying list
 params@params
-
 }
 \seealso{
 Other geoprocessing: 
 \code{\link{arc_form_params}()},
 \code{\link{arc_job_status}()},
+\code{\link{gp_job_from_url}()},
 \code{\link{gp_params}}
 }
 \concept{geoprocessing}
