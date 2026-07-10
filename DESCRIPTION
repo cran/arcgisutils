@@ -1,6 +1,6 @@
 Package: arcgisutils
 Title: R-ArcGIS Bridge Utility Functions
-Version: 0.5.0
+Version: 0.6.0
 Authors@R: c(
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X")),
@@ -9,7 +9,9 @@ Authors@R: c(
     person("Martha", "Bass", role = "ctb",
            comment = c(ORCID = "0009-0004-0268-5426")),
     person("Eli", "Pousson", , "eli.pousson@gmail.com", role = "ctb",
-           comment = c(ORCID = "0000-0001-8280-1706"))
+           comment = c(ORCID = "0000-0001-8280-1706")),
+    person("Ryan", "Zomorrodi", , "ryanzomorrodi@gmail.com", role = "ctb",
+           comment = c(ORCID = "0009-0003-6417-5985"))
   )
 Description: Developer oriented utility functions designed to be used as
     the building blocks of R packages that work with ArcGIS Location
@@ -35,12 +37,13 @@ Language: en
 RoxygenNote: 7.3.3
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.67, xz
 NeedsCompilation: yes
-Packaged: 2026-03-03 21:54:49 UTC; josiahparry
+Packaged: 2026-07-10 18:46:24 UTC; josiahparry
 Author: Josiah Parry [aut, cre] (ORCID:
     <https://orcid.org/0000-0001-9910-865X>),
   Kenneth Vernon [ctb] (ORCID: <https://orcid.org/0000-0003-0098-5092>),
   Martha Bass [ctb] (ORCID: <https://orcid.org/0009-0004-0268-5426>),
-  Eli Pousson [ctb] (ORCID: <https://orcid.org/0000-0001-8280-1706>)
+  Eli Pousson [ctb] (ORCID: <https://orcid.org/0000-0001-8280-1706>),
+  Ryan Zomorrodi [ctb] (ORCID: <https://orcid.org/0009-0003-6417-5985>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2026-03-04 06:40:09 UTC
+Date/Publication: 2026-07-10 23:20:08 UTC

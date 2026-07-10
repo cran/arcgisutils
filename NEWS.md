@@ -1,5 +1,23 @@
+# arcgisutils 0.6.0
+
+## New Features
+
+- `arc_user_content()` now defaults `user` to the authenticated user via `arc_user_self()`
+- `arc_user_self()` returns a `PortalUser` object (subclass of `list`)
+- `arc_gp_job` R6 object gains a `messages()` method to return the geoprocessing messages
+
+## Fixed
+
+- Fixes `as_esri_features()` to retain `null` values closes <https://github.com/R-ArcGIS/arcgisutils/issues/91>
+- Fixes `as_form_params()` double-encoding string scalars; elements that are already a single character string are passed through as-is instead of being wrapped in `yyjsonr::write_json_str()`
+
+## Changed
+
+- Bumped extendr to v0.9.0
+
 # arcgisutils 0.5.0
 
+- `from_spatial_reference()` handles CRS WKIDs from the ESRI authority
 - Adds `from_envelope()` and `from_spatial_reference()` to handle processing lists that represent an Esri Envelope and Esri SpatialReference object converting them into sf `bbox` objects
 - Adds `auth_shiny()` and `oauth_provider_arcgis()` to support authentication in a Shiny application. [`{shinyOAuth}`](https://github.com/lukakoning/shinyOAuth/) is now a suggested package <https://github.com/R-ArcGIS/arcgisutils/pull/82>
 - Adds `gp_job_from_url()` which creates a new `arc_gp_job` from a given URL

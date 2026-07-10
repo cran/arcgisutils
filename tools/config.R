@@ -7,6 +7,8 @@ source("tools/msrv.R")
 # check DEBUG and NOT_CRAN environment variables
 env_debug <- Sys.getenv("DEBUG")
 env_not_cran <- Sys.getenv("NOT_CRAN")
+env_target <- Sys.getenv("CARGO_TARGET_DIR")
+.target_dir <- if (nzchar(env_target)) env_target else "./rust/target"
 
 # check if the vendored zip file exists
 vendor_exists <- file.exists("src/rust/vendor.tar.xz")
@@ -35,7 +37,7 @@ if (!is_not_cran) {
 
 # when DEBUG env var is present we use `--debug` build
 .profile <- ifelse(is_debug, "", "--release")
-.clean_targets <- ifelse(is_debug, "", "$(TARGET_DIR)")
+.clean_targets <- ifelse(is_debug || is_not_cran, "", "$(TARGET_DIR)")
 
 # We specify this target when building for webR
 webr_target <- "wasm32-unknown-emscripten"
@@ -102,7 +104,8 @@ new_txt <- gsub("@CRAN_FLAGS@", .cran_flags, mv_txt) |>
   gsub("@CLEAN_TARGET@", .clean_targets, x = _) |>
   gsub("@LIBDIR@", .libdir, x = _) |>
   gsub("@TARGET@", .target, x = _) |>
-  gsub("@PANIC_EXPORTS@", .panic_exports, x = _)
+  gsub("@PANIC_EXPORTS@", .panic_exports, x = _) |>
+  gsub("@TARGET_DIR@", .target_dir, x = _)
 
 message("Writing `", mv_ofp, "`.")
 con <- file(mv_ofp, open = "wb")
